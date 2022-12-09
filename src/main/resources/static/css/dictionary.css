@@ -1,0 +1,331 @@
+body{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header {
+    position: fixed;
+    width: -moz-available;
+    /*noinspection CssInvalidPropertyValue*/
+    width: -webkit-fill-available;
+    height: 60px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    margin-top: -10px;
+    margin-left: -7px;
+    border-width: 2px;
+    border-style: none;
+    border-left: none;
+    border-right: none;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    transition: background-color 1s;
+}
+
+
+.search_box, nav, .nav-item, #search-icon, #search-input, .nav-item-current, .user-item, #username  {
+    display: inline-block;
+    text-align: center;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+} 
+
+.user-item {
+    float: right;
+    margin: 10px 30px 0 30px;
+    padding-bottom: 10px;
+    max-height: 40px;
+    min-height: 40px;
+    max-width: fit-content;
+    min-width: 150px;
+    width: 100px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.user-opt {
+    display: none;
+    width: 80px;
+    background-color: white;
+    margin: 0;
+    padding: 10px;
+    font-family: "Microsoft Yahei", Microsoft Yahei, "Microsoft Yahei UI", "PingFang SC", STHeiti, oalecd9, Helvetica, "方正黑体", sans-serif;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+
+.user-opt:hover{
+    background-color: lightpink;
+}
+
+.user-opt-list{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+}
+
+.user-item:hover .user-opt{
+    display: block;
+}
+
+#username {
+    width: 90px;
+    right: 30px;
+    position: absolute;
+    /* word-wrap:normal; */
+}
+
+.user-opt-list:hover .user-opt{
+    display: block;
+}
+
+/* 用户头像 */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    /* vertical-align:middle; */
+}
+
+.search_box{
+    border-radius: 15px;
+    border-width: 1px;
+    border-bottom: none;
+    padding: 0;
+    width: fit-content;
+    min-width: 30px;
+    max-height: 40px;
+    background-color: white;
+}
+
+.headline {
+    height: 30px;
+    margin-top: 5px;
+    float: left;
+    padding-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.headline:hover {
+    color: lightpink;
+    transform: translateX(10%);
+}
+button{
+    transition: all .3s ease-in-out;
+}
+
+button:hover{
+    transform: scale(1.15);
+}
+
+.nav-item{
+    transition: all .3s ease-out;
+}
+
+.nav-item:hover{
+    transform: translateY(15%);
+}
+
+.nav-item-current{
+    border-bottom-color: rgba(255,188,154,0.8);
+    border-bottom-style: solid;
+}
+
+.nav-item, .nav-item-current{
+    width: 70px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.nav-item:hover{
+    border-bottom-color: rgba(255,188,154,0.8);
+    border-bottom-style: solid;
+}
+
+#search-input {
+    display: inline-block;
+    border: none;
+    width: 0;
+    max-height: 20px;
+    border-radius: 15px;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    text-align: justify;
+    margin: 5px 0 5px 1px;
+    transition: width 0.25s;
+    outline: none;
+}
+
+#search-input-description{
+    margin: 100px;
+}
+
+#search_icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    border-left-color: white;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.main-item{
+    display: none;
+}
+
+.dict-frame{
+    display: none;
+}
+
+.dict-frame-show {
+    float: left;
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    margin-left: -5px;
+    padding: 0 5px;
+    border-width: 10px;
+    border-radius: 5px;
+    border-color: darkgray;
+    border-style: outset;
+    background-color: white;
+    transition: width;
+    transition-duration: 1s;
+    z-index: 800;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.29);
+}
+
+#choose-dict{
+    width: 150px;
+    height: 30px;
+    font-family: "Segoe Script", serif;
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+#label-choose-dict{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+    font-family: "Segoe Script", serif;
+    font-size: 20px;
+}
+
+#wq-frame{
+    width: 500px;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    border-color: #e28b99;
+    border-style: none;
+    border-width: 2px;
+    z-index: 199;
+}
+
+
+
+.add2book{
+    float: right;
+}
+
+.book-cover{
+    position: absolute;
+    background-image: url('../images/cover/oxforde9.jpg');
+    background-size: cover;
+    width: 50px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    border-color: #e28b99;
+    border-style: outset;
+    border-width: 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.29);
+    z-index: 200;
+}
+
+#word-query:hover .book-cover {
+    transition: opacity 0.5s ease-in-out, z-index 1s ease-in-out;
+    opacity: 0;
+    z-index: 198;
+}
+
+#word-query:hover #wq-frame{
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all 3s;
+    transform: perspective(600px) rotateY(0deg);
+    transition-duration: 3s;
+}
+
+.dict-frame-show, .content {
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.main-item-current {
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: fit-content;
+    /*noinspection CssInvalidPropertyValue*/
+    /*width: -webkit-fill-available;*/
+    margin: 0 15%;
+    box-shadow: 0 0 5px 5px rgba(0 ,0 , 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    margin: 10px auto;
+    font-family: "Segoe Script", serif;
+    font-size: medium;
+    border-color: rgb(20, 111, 215);
+    text-align: center;
+    color: white;
+    border-style: solid;
+    background-color: rgb(20, 111, 215);
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+#home-title-text{
+    z-index: 700;
+    font-size: 100px;
+    text-align: center;
+    font-family: "Segoe Script", serif;
+    top: 20%;
+    left: 30%;
+    position: absolute;
+}
+
+.listening-main {
+    margin: 10%;
+}

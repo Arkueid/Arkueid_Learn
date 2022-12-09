@@ -1,0 +1,51 @@
+            .box {
+				width: 30%;
+				height: auto;
+				background-color: #e6ebf3;
+				text-align: center;
+				margin: 4% auto;
+				border-radius: 10px  ;
+			}
+
+			.inp {
+				border: 0.2rem #1b91b5 solid;
+				width: 90% ;
+				min-height: 400px;
+				height: auto;
+				margin-top: 0;
+				margin-bottom: 20px;
+				margin-left: 5%;
+				margin-right: 5%;
+				font-size: 26px;
+				/*text-align: left;*/
+				/*padding-top:10px;*/
+			}
+			button{
+				width: 100px;
+				height: 30px;
+				border-radius: 30px;
+				margin: 10px auto;
+				font-family: "Segoe Script", serif;
+				font-size: medium;
+				border-color: rgb(20, 111, 215);
+				text-align: center;
+				color: white;
+				border-style: solid;
+				background-color: rgb(20, 111, 215);
+			}
+			button:active{
+				transform: scale(0.95);
+			}
+            button:focus,button:hover{
+                color: #00A9FF;
+            }
+            .sub1{
+                width:30%;
+                height:800px;
+                border:solid 1px;
+                float:left;
+                background-color: #e6ebf3;
+                text-align: center;
+                margin:4% 1%;
+                border-radius: 10px  ;
+            }

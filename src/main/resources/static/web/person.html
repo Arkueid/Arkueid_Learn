@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/person.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/person.css">
+</head>
+<body background="../images/background/sakuraStairs.jpg" style="background-size: cover; background-repeat: no-repeat;">
+<div class="Content-Main">
+    <form  action="" method="post" class="form-userInfo" enctype="multipart/form-data">
+        <h1>Profile
+            <a href="../web/dictionary.html">
+                <div style="font-size: medium;">返回首页</div>
+            </a>
+        </h1>
+        <!-- <span class="text1">请在文本框中完善您的个人信息：</span> -->
+        <p></p>
+        <span class="div-left">头像:</span>
+        <div class="fileInputContainer">
+            <img class="avatar" src="../images/default/avatar_girl.svg">
+            <input class="fileInput" id="fileInput" type="file" name="file" accept="image/*" disabled="disabled" value="">
+        </div>
+        <label>
+            <span>昵称:</span>
+            <input type="text"  name="name" placeholder="昵称" disabled="disabled">
+        </label>
+        <label class="Main-sex">
+            <span>性别:</span>
+            <input type="radio" class="man" value="male" disabled="disabled">男
+            <input type="radio" class="woman" value="female" disabled="disabled">女
+        </label>
+        <label>
+            <span>邮箱:</span>
+            <input type="email" name="email" placeholder="@.com" disabled="disabled">
+        </label>
+        <label>
+            <span>生日:</span>
+            <input type="date" name="date" pattern="<fmt:formatDate value='${user.createtime }' pattern='yyyy-MM-dd  HH:mm:ss'/>" disabled="disabled">
+        </label>
+        <label>
+            <span>个人简介:</span>
+            <textarea id="message" name="message" placeholder="个人简介" disabled="disabled"></textarea>
+        <label>
+            <input type="button" class="edit" value="编辑">
+        </label>
+    </form>
+</div>
+</body>
+</html>

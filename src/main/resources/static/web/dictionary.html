@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arcueid Learn - 在线词典</title>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/dictionary.js"></script>
+    <link rel="stylesheet" href="../css/dictionary.css">
+    <link rel="icon" href="../images/icon/favicon.ico" sizes="64x64">
+</head>
+<body>
+    <div class="header">
+        <div class="headline">
+            <b>Arcueid Learn</b>
+        </div>
+        <div class="search_box" onclick="setFocus('#search-input')">
+            <img id="search_icon" src="../images/icon/search.svg" alt="">
+            <input onblur="setBlur('#search-input')" type="text" id="search-input" autocomplete="on" aria-label="Search">
+        </div>
+        <nav>
+            <div class="nav-item" id="word-query-tab">查词</div>
+            <div class="nav-item" id="daily-listening-tab">听力练习</div>
+            <div class="nav-item" id="daily-quotation-tab">美句欣赏</div>
+            <div class="nav-item" id="daily-song-tab">音乐时刻</div>
+        </nav>
+        <div class="user-item">
+            <img class="avatar" src="../images/icon/favicon.ico" alt="头像">
+            <div id="username" style="font-family: 'Segoe Script', serif; width: 90px; font-size: large; text-align: center;"><marquee style="margin: 0;padding: 0;width: fit-content">用户名21212121221</marquee></div>
+            <div class="user-opt-list" tabindex="1">
+                <a href="../web/person.html">
+                    <span class="user-opt">个人资料</span>
+                </a>
+                <a href="../web/colllections.html">
+                    <span class="user-opt">收藏夹</span>
+                </a>
+                <a href="../users/logout">
+                    <span class="user-opt">注销登录</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div id="word-query" class="dict-frame">
+            <div>
+                <label for="choose-dict" id="label-choose-dict">
+                    词典
+                    <select id="choose-dict">
+                        <option value="simpledict">SimpleDict</option>
+                        <option value="oxforde9">牛津高阶9</option>
+                        <option value="collins">柯林斯高阶</option>
+                        <option value="ldoce">朗文当代</option>
+                    </select>
+                </label>
+                <button class="add2book">加入生词本</button>
+
+            </div>
+            <div draggable="true" ondrop="prevent">
+                <div class="book-cover"></div>
+                <iframe id="wq-frame" src=""></iframe>
+                <div class="word" id="" name="" style="display: none"></div>
+            </div>
+        </div>
+        <div id="home" class="home">
+            <head>
+                <script src="../js/sakuraPlus.js"></script>
+
+            </head>
+            <body id="home-content" background="../images/background/sky.jpg" style="background-size: cover;background-attachment:fixed ;background-repeat:no-repeat;">
+                <h1 id="home-title-text"></h1>
+            </body>
+            <div style="display: none;" id="src-text">To Boldy Go</div>
+            <div style="display: none;" id="blank"></div>
+        </div>
+        
+        <div class="content">
+            <div id="daily-listening" class="main-item">
+                <div class="title-image">
+                    <img src="../images/background/desktop.jpg" width="100%" height="100%" alt="">
+                </div>
+                <h2>听力练习</h2>
+                <div class="listening-main">
+                    <!-- 样例 -->
+                    <div class="listening-item">
+                        <audio controls>
+                            <source id="listeningsource" src="http://k6.kekenet.com/Sound/2021/08/472_0955504PDq.mp3">
+                        </audio>
+                        <p id="listeningmaterial" style="font-family:Comic Sans MS; font-size:18px;"></p>
+                    </div>
+                    <br>
+                    <div class="tail" style="min-height: 50px;">
+                        <button id="practice" class="collect">收藏</button>
+                    </div>
+                </div>
+            </div>
+            <div id="daily-quotation" class="main-item">
+                <div class="title-image">
+                    <img src="../images/background/dailysentence.png" width="100%" height="100%">
+                </div>
+                <h2>美句欣赏</h2>
+                <div class="listening-main">
+                    <div class="listening-item">
+                        <p id="sen-en" value="" style="font-family:Comic Sans MS; font-size:18px; font-weight:bold">“What hurts more,the pain of hard work,or the pain of regret”</p>
+                    </div>
+                    <div class="listening-item">
+                        <p id="sen-cn" style="font-family:Comic Sans MS; font-size:18px;">
+                            &nbsp;&nbsp;这是来自波士顿凯尔特人球队训练馆上面的一句标语，<br>
+                            “不要害怕疼因为没有什么东西比生活本身更疼，如果你害怕痛
+                            那你就想一想是训练和努力的时候更痛还是失败时候的悔恨更让你心痛。”<br>
+                            其实一个真正平和的人 ，在他平和之前一定来自国极致的努力
+                            佛系青年不是你躺倒就叫做佛系，是人像唐僧轮转了十世，仍要足够努力然后你才能立地成了佛
+                        </p>
+                    </div>
+                    <div class="tail" style="min-height: 50px;">
+                        <button id="sentence" class="collect">收藏</button>
+                    </div>
+                </div>
+            </div>
+            <div id="daily-song" class="main-item">
+                <div class="title-image">
+                    <img src="../images/background/bocchirock.jpg" width="100%" height="60%">
+                </div>
+                <h2>音乐时刻</h2>
+                <div class="listening-main">
+                    <div class="listening-item">
+                        <p id="song-name" style="font-family:Comic Sans MS; font-size:18px;font-weight:bold">
+                            一首来自Radiohead乐队的《creep》
+                        </p>
+                        <iframe id="neteaseplayer" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=1996323629&auto=1&height=66"></iframe>
+                    </div>
+                    <div class="listening-item">
+                        <p id="lyrics" style="font-family:Comic Sans MS; font-size:18px;">
+                            &nbsp;&nbsp;在Radiohead成立之前，还在读大学的汤姆·约克便写下了歌曲《Creep》，创作灵感来自于他追求的一位女孩。<br>
+                            从《Creep》的歌词看来，自嘲中又夹杂着质问和宣泄。整首歌曲在放肆的吉他伴奏下，释放着无奈忧伤的情绪，具有相当强烈的感染力。<br>
+                            尽管表面上诉说着一个男生对爱情的迷茫，但有多种阐释的可能性，与社会的疏离成了该歌曲的深层次意义。<br>
+                            批判现实，咀嚼痛苦，期盼光明，寻求精神解脱，是摇滚之核。《Creep》的词曲里就蕴含着反思，从爱的不对等到人生位置的追问
+                        </p>
+                    </div>
+                    <div class="tail" style="min-height: 50px;">
+                        <button id="song" class="collect">收藏</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+
+</footer>
+</html>

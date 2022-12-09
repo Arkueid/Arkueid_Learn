@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="../css/collections.css" >
+    <link rel="stylesheet" type="text/css" href="../css/vcubook.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/collections.js"></script>
+    <script>
+        var myWordBook = [{word: "nice", exp: "好看"}, {word: "hello", exp: "你好"}, {word: "OK", exp: "好的"}]; //测试生词本
+        var wordIndex = 0;
+        var mySentences;
+        var myPractices;
+    </script>
+</head>
+<body>
+    <div class="nav_left">
+        <div class="nav_left_main one_level_div">
+            <a href="../web/dictionary.html">
+                <div class="one_div">
+                    主页<img src=../images/icon/goback.svg alt="backarrow">
+                </div>
+            </a>
+
+        </div>
+        <div id="practicels" class="nav_left_about one_level_div">
+            <div class="one_div">
+                收藏听力
+                <img src=../images/icon/arrow.svg alt="">
+            </div>
+        </div>
+        <div id="sentencels" class="nav_left_about one_level_div">
+            <div class="one_div">
+                收藏好句
+                <img src=../images/icon/arrow.svg alt="">
+            </div>
+        </div>
+        <div class="nav_left_about one_level_div" id="wordls">
+            <div class="one_div">
+                标记生词
+                <img src=../images/icon/arrow.svg alt="">
+            </div>
+            <!-- 样例 -->
+           <!-- <div class="nav_left_about one_leve2_div" >-->
+               <!-- <div class="two_div" > -->
+                   <!-- dandelion -->
+               <!-- </div> -->
+           <!-- </div> -->
+        </div>
+        <div id="songls" class="nav_left_about one_level_div">
+            <div class="one_div">
+                收藏歌曲
+                <img src=../images/icon/arrow.svg alt="dwonarrow">
+            </div>
+<!--            样例-->
+<!--            <div class="nav_left_about one_leve2_div">-->
+<!--                <div class="two_div">-->
+<!--                    Queen-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+        <div class="nav_left_main one_level_div">
+            <div class="one_div" onclick="showPopup()" id="starttest">
+                点击测试
+            </div>
+        </div>
+    </div>
+    <div class="nav_right">
+<!--        <br/><br/>-->
+        <p style="font-size: 25px;font-weight: bold; position: relative">收藏夹</p>
+        <br/>
+        <!--div中间将单词内容放进来-->
+        <div class="inp"  >单词测试</div>
+        <br/>
+        <button onclick="previousWord()" id="previousBtn">Previous</button>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <button onclick="nextWord()" id="nextBtn">Next</button>
+        &nbsp&nbsp&nbsp
+        <button onclick="showTip()" id="showExp">提示</button>
+        <br/>
+        <br/>
+    </div>
+    <div id="overlay">
+        <div class="popup">
+            <p class="popup_title">提示</p>
+            <p class="popup_content">准备好开始测试了吗</p>
+            <div class="popup_btn">
+                <button class="cancelBtn" onclick="hidePopup()">取消</button>
+                <button class="confirmBtn" onclick="hidePopup()">确认</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script language="JavaScript">
+    $(document).ready(function () {
+        $('.one_leve2_div').hide();
+    });
+    $('.one_div').click(function () {
+        $(this).parents().children('.one_leve2_div').toggle(300);
+        $(this).parents().siblings().children('.one_leve2_div').hide();
+    });
+    $('.two_div').click(function () {
+        $(this).parents().children('.one_leve3_div').toggle(300);
+        $(this).parents().siblings().children('.one_leve3_div').hide();
+    });
+</script>
+</html>

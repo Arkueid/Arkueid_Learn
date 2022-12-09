@@ -1,0 +1,158 @@
+        .Content-Main{
+            max-width: 800px;
+            margin: 100px auto;
+            border-style: solid;
+            border-radius: 20px;
+            /* -moz-border-radius: 5px; */
+            /* -webkit-border-radius: 5px; */
+            font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-shadow: 1px 1px 1px #444;
+            color: lightpink;
+            background: rgba(255, 255, 255, 0.85);
+            transition: all .5s ease-in-out;
+        }
+        .Content-Main input[type="text"], input[type="email"], input[type="date"], input[type="radio"], textarea{
+            height: 30px;
+            font-size: 15px;
+            font-family: Comic Sans MS;
+        }
+        .Content-Main input{
+            background-color: white;
+        }
+        .Content-Main h1{
+            padding: 10px;
+            text-align:center;
+            display: block;
+            font-family: Comic Sans MS;
+
+            border-bottom: 1px solid #444;
+        }
+        .Content-Main h1 a{
+             float:left;
+             position: sticky;
+             margin-right: 0;
+             padding-right: 0;
+             font-size: 15px;
+             color: lightpink;
+             text-decoration: none;
+        }
+        .Content-Main h1 a:hover{
+              float:left;
+              font-size: 10px;
+              color: #f9aa32;
+              text-decoration: none;
+        }
+        .text1{
+            display: block;
+            text-align: center;
+            font-family: Comic Sans MS;
+
+        }
+        .Content-Main label{
+            margin: 0px 0px 5px;
+            display: block;
+        }
+        span{
+            font-size: medium;
+            font-family: Comic Sans MS;
+
+        }
+        .fileInputContainer{
+            height: 99px;
+            width: 99px;
+            margin: 16px 21%;
+            border: none;
+            /* background: url(../images/icon/favicon.ico); */
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+        }
+        .avatar{
+            height: 99px;
+            width: 99px;
+            margin: 0;
+            padding: auto;
+        }
+        .fileInput{
+            height: 99px;
+            width: 99px;
+            border: none;
+            margin: 0;
+            opacity: 0;
+            filter:alpha(opacity=0);
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: #333;
+        }
+        .fileInput:hover{
+            cursor: pointer;
+        }
+        .div-left{
+            width: 20%;
+            float: left;
+            text-align: right;
+            padding-right: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .Content-Main label>span{
+            width: 20%;
+            float: left;
+            text-align: right;
+            padding-right: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .Main-sex{
+            padding-right: 13px;
+            padding-bottom: 13px;
+            font-weight: bold;
+            line-height: 4px;
+        }
+        .Main-sex input[type=checkbox]{
+            margin-top:6px;
+            vertical-align:middle;
+        }
+        .Content-Main input[type="text"],.Content-Main input[type="email"],.Content-Main textarea{
+            height: 25px;
+            width: 70%;
+            line-height: 15px;
+            padding: 5px 0px 5px 5px;
+            margin-bottom: 16px;
+            margin-right: 6px;
+            margin-top: 2px;
+            border-color: lightpink;
+            border: none;
+            border-radius:2px;
+            -webkit-border-radius:2px;
+            -moz-border-radius:2px;
+            outline-color: lightpink;
+            transition: all .6s ease-in-out;
+            background:  white;
+            color: #525252;
+        }
+        .Content-Main textarea{
+            height: 100px;
+            width: 70%;
+            padding: 5px 0px 0px 5px;
+        }
+        .Content-Main .submit, .edit{
+            padding: 8px 24px 8px 24px;
+            margin: 15px 45%;
+            border: none;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #FFE477;
+            box-shadow: 1px 1px 1px  #3D3D3D;
+            -moz-box-shadow: 1px 1px 1px  #3D3D3D;
+            -webkit-box-shadow: 1px 1px 1px  #3D3D3D;
+            color: #585858;
+            background: white;
+        }
+        .Content-Main .button:hover{
+            color:  #333;
+            background-color:  #EBEBEB ;
+        }
